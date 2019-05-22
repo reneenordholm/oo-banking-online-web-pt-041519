@@ -13,7 +13,6 @@ class Transfer
   end
   
   def execute_transaction
-    #sender can send receiver amount
-    @sender + @amount || @receiver + @amount
+
   end
 end
