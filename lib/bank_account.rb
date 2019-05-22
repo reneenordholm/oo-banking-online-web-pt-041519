@@ -11,4 +11,8 @@ class BankAccount
   def deposit(add_funds)
     @balance += add_funds
   end
+  
+  def display_balance
+    @balance
+  end
 end
