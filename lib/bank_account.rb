@@ -9,7 +9,6 @@ class BankAccount
   end
   
   def deposit(funds)
-    @balance + funds
-    return @balance
+    @balance + funds = @balance
   end
 end
