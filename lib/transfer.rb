@@ -14,10 +14,17 @@ class Transfer
   
   def execute_transaction
     #bank checks the accounts are valid
-    if valid?
+    if @sender.balance > @amount && @status == "pending"
     #sender sends funds to receiver
     
     #funds sent to receiver is deducted from sender's account
+      @sender.balance -= @amount
     #funds sent to receiver is added to receiver's account
+      @receiver.balance += @amount
+      @status = "complete"
+    else
+      @status = "rejected"
+      return "Transaction rejected. Please check your account balance."
+    end
   end
 end
