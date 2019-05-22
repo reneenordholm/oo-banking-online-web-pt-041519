@@ -9,7 +9,7 @@ class BankAccount
   end
   
   def deposit(add_funds)
-    current_balance = self.balance + add_funds
+    current_balance = balance + add_funds
     return current_balance
   end
 end
