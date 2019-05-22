@@ -10,4 +10,5 @@ class BankAccount
   
   def deposit(funds)
     @balance + funds
+  end
 end
