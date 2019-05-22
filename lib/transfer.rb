@@ -18,7 +18,7 @@ class Transfer
     #sender sends funds to receiver
     
     #funds sent to receiver is deducted from sender's account
-      @sender.balance -= @amount
+      
     #funds sent to receiver is added to receiver's account
       @receiver.balance += @amount
       @status = "complete"
@@ -26,5 +26,10 @@ class Transfer
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
+  end
+  
+  def reverse_transfer
+    @sender.balance += @amount
+    @receiver.balance -= @amount
   end
 end
