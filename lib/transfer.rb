@@ -13,6 +13,6 @@ class Transfer
   end
   
   def execute_transaction
-    
+    #sender sends funds to receiver
   end
 end
